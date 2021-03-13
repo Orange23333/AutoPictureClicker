@@ -16,7 +16,7 @@ namespace AutoPictureClicker
         private Thread clickThread = null;
         public bool clickThread_IsActive { get { return clickThread != null && clickThread.IsAlive; } }
 
-        private struct ClickThreadArguments
+        public struct ClickThreadArguments
         {
             public Screen screen;
             public string templatePath;
@@ -24,14 +24,14 @@ namespace AutoPictureClicker
             public int delay;
             public ClickThreadInfoSave clickThreadInfoSave;
         }
-        private struct ClickThreadInfoSave
+        public struct ClickThreadInfoSave
         {
             public TimeSpan timer;
             public TimeSpan totalRunningTime;
             public System.Drawing.Point lastLocation;
             public byte lastValue;
             public int clickCount;
-            public int scaningCount;
+            public int scanedCount;
         }
 
         #region ===ClickThread===
@@ -100,7 +100,7 @@ namespace AutoPictureClicker
                 ctis.lastLocation = new System.Drawing.Point(0, 0);
                 ctis.lastValue = 0;
                 ctis.clickCount = 0;
-                ctis.scaningCount = 0;
+                ctis.scanedCount = 0;
                 begin = DateTime.Now;
             }
 
@@ -138,8 +138,8 @@ namespace AutoPictureClicker
                     ctis.lastValue = (byte)(maxVal * 255);
                     StatusStrip_Set_toolStripLabel_LastValue_Value(ctis.lastValue);//UI
                     //记录扫描
-                    ctis.scaningCount++;
-                    StatusStrip_Set_toolStripStatusLabel_ScaningCount(ctis.scaningCount);//UI
+                    ctis.scanedCount++;
+                    StatusStrip_Set_toolStripStatusLabel_ScanedCount(ctis.scanedCount);//UI
                     //检查阀值
                     if (maxVal >= cta.threshold / (double)255)
                     {
@@ -206,6 +206,10 @@ namespace AutoPictureClicker
         private void SimClick(int x, int y)
         {
             Cursor.Position = new System.Drawing.Point(x, y);
+            clicker.Invoke((Action)(() =>
+            {
+                clicker.Hide();
+            }));
             User32.mouse_event(User32.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
             User32.mouse_event(User32.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
             clicker.BeginInvoke((Action)(() =>

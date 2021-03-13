@@ -52,11 +52,11 @@ namespace AutoPictureClicker
                 this.toolStripStatusLabel_ClickCount.Text = String.Format("Clicked {0} time(s)", value);
             }));
         }
-        public void StatusStrip_Set_toolStripStatusLabel_ScaningCount(int value)
+        public void StatusStrip_Set_toolStripStatusLabel_ScanedCount(int value)
         {
             this.BeginInvoke((Action)(() =>
             {
-                this.toolStripStatusLabel_ScaningCount.Text = String.Format("Scaned {0} time(s)", value);
+                this.toolStripStatusLabel_ScanedCount.Text = String.Format("Scaned {0} time(s)", value);
             }));
         }
     }

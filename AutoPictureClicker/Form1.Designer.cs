@@ -45,7 +45,7 @@
             this.toolStripStatusLabel_LastLocation = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_LastValue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_ClickCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel_ScaningCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel_ScanedCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.trackBar_SetThreshold = new System.Windows.Forms.TrackBar();
             this.trackBar_SetTimer = new System.Windows.Forms.TrackBar();
             this.textBox_SetThreshold = new System.Windows.Forms.TextBox();
@@ -171,7 +171,7 @@
             this.toolStripStatusLabel_LastLocation,
             this.toolStripStatusLabel_LastValue,
             this.toolStripStatusLabel_ClickCount,
-            this.toolStripStatusLabel_ScaningCount});
+            this.toolStripStatusLabel_ScanedCount});
             this.statusStrip1.Location = new System.Drawing.Point(0, 241);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -220,12 +220,12 @@
             this.toolStripStatusLabel_ClickCount.Text = "Clicked 0 time(s)";
             this.toolStripStatusLabel_ClickCount.ToolTipText = "Click count 点击计数";
             // 
-            // toolStripStatusLabel_ScaningCount
+            // toolStripStatusLabel_ScanedCount
             // 
-            this.toolStripStatusLabel_ScaningCount.Name = "toolStripStatusLabel_ScaningCount";
-            this.toolStripStatusLabel_ScaningCount.Size = new System.Drawing.Size(104, 17);
-            this.toolStripStatusLabel_ScaningCount.Text = "Scaned 0 time(s)";
-            this.toolStripStatusLabel_ScaningCount.ToolTipText = "Scaning count 扫描计数";
+            this.toolStripStatusLabel_ScanedCount.Name = "toolStripStatusLabel_ScanedCount";
+            this.toolStripStatusLabel_ScanedCount.Size = new System.Drawing.Size(104, 17);
+            this.toolStripStatusLabel_ScanedCount.Text = "Scaned 0 time(s)";
+            this.toolStripStatusLabel_ScanedCount.ToolTipText = "Scaning count 扫描计数";
             // 
             // trackBar_SetThreshold
             // 
@@ -373,7 +373,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog_SelectTemplate;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_TotalRunningTime;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ClickCount;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ScaningCount;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ScanedCount;
     }
 }
 

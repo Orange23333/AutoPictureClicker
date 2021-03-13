@@ -69,6 +69,7 @@ namespace AutoPictureClicker
         public static readonly string ConfigPath = "config.config";
         public static readonly string ScreenShotPath = "ScreenShot.png";
         public static readonly string ResultPath = "Result.png";
+        public static readonly string OutputDirectory = "./output";
         //表
         public static readonly string Name_ScreenIndex = "ScreenIndex";
         public static readonly string Name_TemplatePath = "TemplatePath";

@@ -152,7 +152,12 @@ namespace AutoPictureClicker
                             //programArguments.SkipStartupInfo = true;
                             programArguments.StartThreadDirectly = true;
                             break;
+                        case "--output-working-data":
+
+                            break;
                         case "--clean":
+
+                            break;
                         case "-h":
                         case "--help":
                         default:

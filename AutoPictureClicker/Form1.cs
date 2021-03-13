@@ -111,7 +111,7 @@ namespace AutoPictureClicker
                     //"Auth 作者: Orange233\n" +
                     "Copyright © 2020 Bisitsoft\n" +
                     "Official website 官方网站: https://www.ourorangenet.com/project/software/PictureClicker/\n" +
-                    "Feedback here 反馈地址: https://github.com/Orange23333/AutoPictureClicker/issues" +
+                    "Feedback here 反馈地址: https://github.com/Orange23333/AutoPictureClicker/issues\n" +
                     "Version 版本: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(),
                     "About 关于", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1
                 );

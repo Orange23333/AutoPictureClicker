@@ -23,12 +23,13 @@ config.config可直接用记事本修改，请认真阅读config内内容，在�
 启动参数：
 "--skip-startup-info": 启动时跳过启动信息。
 "--start-thread-directly": 直接启动线程。会自动打开--skip-startup-info开关。
+"--output-working-data": 输出每一次扫描的信息。
 "--clean": 清理一些程序产生的垃圾。
-"-h" "--help": 获取帮助。
+"-h" "--help": 获取帮助。（暂时没用）
 
 可以通过运行Clean.bat来清理程序产生的垃圾。
 
 什么？遇到bug了：反馈链接：https://github.com/Orange23333/AutoPictureClicker/issues
 已知BUG：
 模板缺少会卡死，目前正在修改异常捕获机制。
-模板路径的现实会越界，目前正在修改UI。
+模板路径的显示会越界，目前正在修改UI。
